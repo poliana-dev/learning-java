@@ -1,34 +1,3 @@
-# Sumário
-
-1. [Entendendo a Sintaxe](#entendendo-a-sintaxe)
-   - [Estrutura Básica](#estrutura-básica)
-   - [Método `main()`](#método-main)
-   - [Comentários](#como-fazer-comentários)
-
-2. [Variáveis em Java](#variáveis-em-java)
-   - [Tipos de Variáveis](#tipos)
-   - [Declaração e Atribuição](#como-declarar-variáveis)
-   - [Variáveis `final`](#variáveis-final)
-   - [Concatenação de Strings](#concatenação)
-   - [Declaração Múltipla](#como-declarar-variáveis-múltiplas)
-
-3. [Tipos de Dados](#tipos-de-dados)
-   - [Tipos Primitivos](#primitivos)
-   - [Tipos Não Primitivos](#não-primitivos)
-
-4. [Casting em Java (Conversão de Tipos)](#casting-em-java-conversão-de-tipos)
-   - [Conversão Automática](#conversão-automática)
-   - [Conversão Manual](#conversão-manual)
-
-5. [Operadores](#operadores)
-   - [Aritméticos](#aritméticos)
-   - [Comparação](#comparação)
-   - [Lógicos](#lógicos)
-
-6. [Java Math](#java-math)
-
-***
-
 # ENTENDENDO A SINTAXE
 
 Cada linha de código em Java deve estar dentro de um `class`
