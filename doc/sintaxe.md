@@ -257,11 +257,60 @@ A conversão funciona na seguinte ordem:
     | Operador |    Nome         |    
     |  :---:   |     :---:       | 
     | &&       |    AND          |   
-    | ||       |    OR           |
+    | \|\|     |    OR           |
     | !        |    NOT          |
 
 
-## JAVA MATH 
+## JAVA MATH
+
+É um classe que possui vários métodos que permite a execução de tarefas matemáticas em números.
+
+Alguns métodos bastante utilizados:
+
+| Método    | Descrição                 |
+| :---:     |      :---                 | 
+|   max     | Encontrar o maior valor   |
+|   min     | Encontrar o menor valor   |
+|   sqrt    | Retornar a raiz quadrada  |
+|   abs     | Retorna o valor absoluto (positivo) |
+|   random  | Retorna um número aleatório | 
+
+
+## CONDICIONAIS EM JAVA
+
+Java possui as seguintes instruções de condição: `if` (se verdadeiro), `else` (se falso), `else if` (se verdadeiro, mas diferente de `if` ), e `switch` (troque caso for..)
+
+Exemplo de `if`, `else` e `else if`:
+
+```java
+    class userInput{
+        public static void main(String[] args){
+            Scanner idade = new Scanner(System.in);
+            System.out.println("Digite sua idade:");
+
+            if (userAge<=18){ // se maior ou igual a 18
+                System.out.println("Você é maior de idade");
+            }
+            else if (userAge>=18 && userAge<=29){ // se maior que 18 e menor que 29
+                System.out.println("Você tem direito a carteira de estudante");
+            } 
+            else{ // se falso
+                System.out.println("Você não é maior de idade");
+            }
+
+            
+        }
+    }
+```
+
+- Existe um modo curto de declarar `if/else` com o operador ternário:
+    `int variavel = (condicao) ? verdadeiro :  falso;`
+    Serve para economizar linhas e tempo.
+
+
+    
+
+
 
 
    
