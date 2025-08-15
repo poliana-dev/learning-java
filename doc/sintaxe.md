@@ -1,3 +1,9 @@
+---
+marp: true
+paginate: true
+
+---
+
 # ENTENDENDO A SINTAXE
 
 Cada linha de código em Java deve estar dentro de um `class`
@@ -39,7 +45,11 @@ Tipos:
 - `char`: armazena caracteres únicos, como 'a' ou 'B'. Valores char são cercados por *aspas simples*
 - `boolean`: Armazena valores com dois estados: verdadeiro ou falso
 
-Para criar uma variável é preciso declarar o __type__ e após nomear.
+> 1. Para criar uma variável é preciso declarar o __type__ e após nomear.
+> 2. Também pode declarar uma variável e depois atribuir valor.
+
+***
+
 
 ```java
     public class Main{
@@ -50,7 +60,7 @@ Para criar uma variável é preciso declarar o __type__ e após nomear.
     }
 ```
 
-Também pode declarar uma variável e depois atribuir valor.
+
 
 ```java
      public class Main{
@@ -60,9 +70,10 @@ Também pode declarar uma variável e depois atribuir valor.
             System.out.printIn(numero);
         }
     }
-
 ```
-- OBSERVAÇÃO: Se você atribuir um novo valor a uma variável, o valor antigo será substituído.
+OBSERVAÇÃO: Se você atribuir um novo valor a uma variável, o valor antigo será substituído.
+
+***
 
 ### Variáveis `final`
 
@@ -74,7 +85,7 @@ Exemplo:
     final int numero = 15;
     numero = 20;  // isso vai gerar um erro
 ```
-
+***
 ### Contatenação
 
 - Primeira forma:
@@ -86,7 +97,6 @@ Exemplo:
             }
         }
     ```
-
 - Segunda forma:
     ```java
         public class Main{
@@ -98,6 +108,7 @@ Exemplo:
             }
         }
     ```
+***
 
 - Terceira forma (`concat()`):
     ```java
@@ -112,6 +123,8 @@ Exemplo:
     ```
 
 OBSERVAÇÃO: Quando se trata de variáveis númericas o `+` é operador matemático  
+
+***
 
 ### Como declarar variáveis múltiplas?
 
@@ -134,10 +147,11 @@ OBSERVAÇÃO: Quando se trata de variáveis númericas o `+` é operador matemá
                 int a,b,c;
                 a= b= c = 5;
                 System.out.println(a+ b + c);
-
             }
         }
     ```
+
+***
 
 ## TIPOS DE DADOS
 
@@ -147,6 +161,7 @@ Os tipos de dados de uma variável são divididos em dois grupos: Os primitivos 
 
 Existem 8 tipos primitivos. São eles: `byte`, `int`, `short`, `long`, `float`, `double`, `boolean`, `char`.
 - Esses tipos de dados especifica não só a variável como também os tipos de valores que ela pode armazenar.
+***
 
 - Só armazena números inteiros (positivos ou negativos):
     - `byte`: Pode armazenar números de -128 até 127. Apenas 8 bits, portando sua capacidade é apenas para números pequenos
@@ -158,38 +173,43 @@ Existem 8 tipos primitivos. São eles: `byte`, `int`, `short`, `long`, `float`, 
     - `float`: Pode armazenar números com uma precisão menor que o double. De 6 até 7 dígitos decimais.
     - `double`: Tem uma precisão maior que o float. De 15 até 16 dígitos decimais.
 
-    OBSERVAÇÃO: O tipo `float` deve ter uma terminação *"f"* e o `double` deve ter a terminação *"d"* 
-    Exemplo:
-    ```java
-        public class Main{
-            public static void main(String[] args){
-                float num= 3.4f;
-                double num_dois= 0.378d;
-                System.out.println(num);
-                System.out.println(num_dois);
-            }
-        }
-    ```
+***
 
-    - `double` é mais seguro para a maioria dos casos devido a sua precisão.
-    É possível tratar números científicos adicionando o *"e"*
-    Exemplo:
-     ```java
-        public class Main{
-            public static void main(String[] args){
-                float f1 = 35e3f; //35000.0 = 10 elevado a 3
-                double d1 = 12E4d; //120000.0 = 10 elevado a 4
-                System.out.println(f1);
-                System.out.println(d1);
-            }
+OBSERVAÇÃO: O tipo `float` deve ter uma terminação *"f"* e o `double` deve ter a terminação *"d"* 
+
+Exemplo:
+```java
+    public class Main{
+        public static void main(String[] args){
+            float num= 3.4f;
+            double num_dois= 0.378d;
+            System.out.println(num);
+            System.out.println(num_dois);
         }
-    ```
+    }
+```
+***
+
+- `double` é mais seguro para a maioria dos casos devido a sua precisão.
+É possível tratar números científicos adicionando o *"e"*
+Exemplo:
+```java
+    public class Main{
+        public static void main(String[] args){
+            float f1 = 35e3f; //35000.0 = 10 elevado a 3
+            double d1 = 12E4d; //120000.0 = 10 elevado a 4
+            System.out.println(f1);
+            System.out.println(d1);
+        }
+    }
+```
 
 - Só armazena valores lógicos ou caracteres:
     - `boolean`: Armazena 'true' ou 'false'
     - `char`: Armazena caracteres utilizando aspas simples.
 
 
+***
 ### Não primitivos
 
 São chamados *tipos de referência*, pois se referem a objetos. São eles: `String`, `Arrays`, `Classes`
@@ -200,6 +220,7 @@ São chamados *tipos de referência*, pois se referem a objetos. São eles: `Str
     - Podem ser `null`, diferente dos tipos primitivos.
     - São criados pelo programador, __exceto__ o tipo `String`.
 
+***
 ### Casting em Java ("Conversão de tipos")
 
 Se trata da conversão de um tipo primitivo para outro.
@@ -209,11 +230,12 @@ A conversão funciona na seguinte ordem:
     `byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`
 
     - Exemplo:
-    ```java
-        int ii = 877;
-        double dd = ii;
-        System.out.println(dd); // ocorre automatico, e sua saída é 877.0
-    ```
+        ```java
+            int ii = 877;
+            double dd = ii;
+            System.out.println(dd); // ocorre automatico, e sua saída é 877.0
+        ```
+***
 
 - A conversão do *maior para o menor* deve ser feita __manualmente__, e segue esta ordem:
     `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte`
@@ -221,11 +243,12 @@ A conversão funciona na seguinte ordem:
     Como converter? Basta colocar um `()` com o tipo primitivo que você deseja converter na frente do valor:
 
     - Exemplo:
-    ```java
-        short ss = 98;
-        byte bb = (byte) ss; // manual
-        System.out.println(bb);
-    ```
+        ```java
+            short ss = 98;
+            byte bb = (byte) ss; // manual
+            System.out.println(bb);
+        ```
+***
 
 ## OPERADORES
 
@@ -241,6 +264,8 @@ A conversão funciona na seguinte ordem:
     | ++       |    Incremento      |
     | --       |    Decremento      |
 
+***
+
 - Comparação
 
     | Operador |    Nome                |    
@@ -251,7 +276,7 @@ A conversão funciona na seguinte ordem:
     | <        |    Menor que...        |
     | >=       |    Maior ou igual a... |
     | <=       |    Menor ou igual a... |
-
+***
 - Lógicos
 
     | Operador |    Nome         |    
@@ -260,7 +285,7 @@ A conversão funciona na seguinte ordem:
     | \|\|     |    OR           |
     | !        |    NOT          |
 
-
+***
 ## JAVA MATH
 
 É um classe que possui vários métodos que permite a execução de tarefas matemáticas em números.
@@ -275,19 +300,19 @@ Alguns métodos bastante utilizados:
 |   abs     | Retorna o valor absoluto (positivo) |
 |   random  | Retorna um número aleatório | 
 
+***
 
 ## CONDICIONAIS EM JAVA
 
 Java possui as seguintes instruções de condição: `if` (se verdadeiro), `else` (se falso), `else if` (se verdadeiro, mas diferente de `if` ), e `switch` (troque caso for..)
 
+***
 Exemplo de `if`, `else` e `else if`:
-
 ```java
     class userInput{
         public static void main(String[] args){
             Scanner idade = new Scanner(System.in);
             System.out.println("Digite sua idade:");
-
             if (userAge<=18){ // se maior ou igual a 18
                 System.out.println("Você é maior de idade");
             }
@@ -297,15 +322,98 @@ Exemplo de `if`, `else` e `else if`:
             else{ // se falso
                 System.out.println("Você não é maior de idade");
             }
+        }
+    }
+```
+> Existe um modo curto de declarar `if/else` com o operador ternário:
+    `int variavel = (condicao) ? verdadeiro :  falso;`. Economiza linhas e tempo.
 
-            
+***
+
+## LOOPS (Laços de repetição):
+
+Exemplo de estrutura de **WHILE**:
+
+```java 
+    import java.util.Scanner;
+    public class Loops{
+        public static void main(String[] args){
+            Scanner temporizador = new Scanner(System.in);
+            System.out.print("Digite os segundos do seu temporizador: ");
+            int segundos = temporizador.nextInt();
+
+            while(segundos>0){
+                System.out.println(segundos);
+                segundos--;
+            }
+
+            System.out.println("Atenção! Seu temporizador chegou ao fim!  ");
+            temporizador.close();
         }
     }
 ```
 
-- Existe um modo curto de declarar `if/else` com o operador ternário:
-    `int variavel = (condicao) ? verdadeiro :  falso;`
-    Serve para economizar linhas e tempo.
+***
+
+Exemplo de estrutura de **DO/WHILE**:
+
+OBSERVAÇÃO: Diferente do `while` convencional, o `do/while` permite que o bloco de código seja executado pelo menos uma vez. Isto é, esse comportamento permite uma execução mesmo que a condição retorne falsa.
+
+```java
+public class TempDois{
+    public static void main(String[] args){
+        Scanner temporizador = new Scanner(System.in);
+        System.out.print("Digite os segundos do seu temporizador: ");
+        int segundos = temporizador.nextInt();
+
+        do{
+            System.out.println(segundos);
+            segundos--;
+        }while(segundos>0);
+
+        System.out.println("Atenção! Seu temporizador chegou ao fim!  ");
+        temporizador.close();
+    }};
+```
+
+***
+
+Exemplo de estrutura de **FOR**:
+
+Estrutura:
+
+```java
+    for (inicialização ; condição ; atualização) {
+        // código 
+    }
+```
+***
+
+Exemplo de código:
+```java
+import java.util.Scanner;
+
+public class TempTres {
+    public static void main(String[] args){
+        Scanner temporizador = new Scanner(System.in);
+        System.out.print("Digite os segundos do seu temporizador: ");
+        int segundos = temporizador.nextInt();
+        temporizador.close();
+
+        for ( ; segundos>0; segundos--) {
+            System.out.println(segundos);
+        }
+
+        System.out.println("Atenção! Seu temporizador chegou ao fim!  ");
+    }
+}
+```
+- Nesse caso a variável segundos já foi definida, por isso o `;`
+
+***
+
+## LISTAS (Array vs ArrayList)  
+
 
 
     
