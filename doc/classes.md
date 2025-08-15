@@ -22,6 +22,7 @@ Segue alguns métodos de entrada da classe `Scanner`.
 |   `nextInt()`         | Para ler um valor inteiro     |
 |   `nextLine()`        | Para ler um valor texto       |
 
+- Existem outros para cada caso específico
 
 Exemplo:
 ```java
@@ -29,13 +30,12 @@ Exemplo:
     
    class userInput{
         public static void main(String[] args){
-            Scanner nome = new Scanner(System.in);  //crie um objeto scanner
+            Scanner nome = new Scanner(System.in);  //crie um objeto scanner; Entrada do teclado
             System.out.print("Digite o nome: ");
         
             String userName = nome.nextLine();  // para ler o objeto
             System.out.println("Seu nome de usuário é: " + userName);  
+            nome.close() // é como fechar uma torneira de água haha
     }
-}
-
-        
+}   
 ```

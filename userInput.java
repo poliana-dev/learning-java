@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class userInput{
+class UserInput{
     public static void main(String[] args){
         Scanner nome = new Scanner(System.in);  //crie um objeto scanner
         System.out.println("Digite o nome: ");
