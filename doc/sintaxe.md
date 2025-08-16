@@ -414,7 +414,80 @@ public class TempTres {
 
 ## LISTAS (Array vs ArrayList)  
 
+### Array
+- São listas de tamanho fixo, ou seja, não aumentam ou diminuem.
+- Definidas da seguinte forma: `tipo[] nomevariavel = {elemento, elemento2}`
+- São menos flexíveis.
 
+Exemplo de código:
+```java
+    public class Students {
+        public static void main (String[] args){
+            String[] estudantes = {"Maria", "Tadeu", "Felicia", "Umberto", "Emilia"};
+
+            System.out.println(estudantes[1]); // acessa elementos por indice. Output: Tadeu
+            System.out.println(estudantes.length); //Informa o tamanho da lista.
+        }
+    }
+```
+
+***
+
+Para percorrer esse tipo de Array, existem duas formas:
+
+1. Com auxílio de uma variável de controle 
+    ```java
+    for (int i =0; i< estudantes.length; i++){
+            System.out.print(estudantes[i].concat(" "));
+        };
+    ```
+2. Utilizar o `for-each` (ideal):
+    ```java
+    for(String i: estudantes){
+                System.out.println(i.concat("; "));
+        };
+    ```
+
+    - Vantagens: não requer contador/variável de controle e é mais légivel
+    > Como ler: Para cada elemento i em estudantes, imprima o valor de i
+
+***
+
+#### Matrizes de Arrays
+
+Sabendo disso, é possivel criar "arrays de arrays". É uma matriz mais direta.
+- Definidas da seguinte forma: `tipo [][] nomevariavel = {{elemento},{elemento, elemento1}}`
+    - O Java permite criar matrizes irregulares. Isto é, por exemplo:
+        >12 
+        1234
+        
+***
+Exemplo de código:
+
+```java
+public class Teste {
+    public static void main(String[] args) {
+        int [][] matriz = {{1,45,6}, {2, 5, 7, 8}};
+        System.out.println(matriz[1][3]);
+    }
+}
+```
+
+Como percorrer:
+```java
+for (int[] linha : matriz ){
+    for (int i: linha){
+        System.out.print(i + " ");
+    } 
+    System.out.println();
+}
+```
+> Para cada linha na matriz. Percorra o valores i.
+
+
+
+***
+### ArrayList
 
     
 
