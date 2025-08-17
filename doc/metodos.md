@@ -80,10 +80,9 @@ public static void main(String[] args) {
 ***
 
 ### Sobrecarga de método
-É importante quando surge a necessidade de ter um método que faz a mesma coisa, mas com tipo primitivo diferente.
+É importante quando surge a necessidade de ter um método que faz a mesma coisa, mas com um tipo primitivo ou variável diferentes.
 
 ***
-
 Exemplo de código:
 ```java
 public class Sobrecarga{
@@ -92,21 +91,39 @@ public class Sobrecarga{
         int media = soma/2;
         return media; 
     }
-
     static float Media(float n1, float n2){
         float soma = n1 + n2;
         float media = soma/2;
         return media; 
     }
-
     public static void main(String[] args) {
         float mediaF = Media(24.6f,435.6f);
         int mediaI = Media(32,45);
 
         System.out.println("Media float: " + mediaF);
         System.out.println("Media inteira: " + mediaI);
-
+        // o método Media() foi sobrecarregado
     }
 }
 ```
 ***
+#### Recursão de métodos
+Recursão é chamar uma função dentro dela mesma. É importante ter cuidado ao fazer funções recursivas, pois pode implicar em chamadas repetitivas desses métodos.
+Exemplo de código:
+```java
+public class Soma {
+  static int soma(int number) {
+    if (number > 0) {
+      return number + soma(number - 1);
+    } else {
+      return 0;
+    }
+  }
+
+  public static void main(String[] args) {
+    int resulto = soma(2);
+    System.out.println(resulto);
+  }
+}
+```
+
