@@ -1,4 +1,4 @@
-package methods;
+package exercicios.methods;
 
 public class Idade{
 

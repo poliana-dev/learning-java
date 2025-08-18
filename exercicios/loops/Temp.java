@@ -1,4 +1,4 @@
-package loops;
+package exercicios.loops;
 import java.util.Scanner;
 
 public class Temp{

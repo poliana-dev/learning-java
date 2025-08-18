@@ -1,22 +1,18 @@
-package loops;
+package exercicios.loops;
 import java.util.Scanner;
 
-// estrutura de do/while
-
-public class TempDois{
+public class TempTres {
     public static void main(String[] args){
         Scanner temporizador = new Scanner(System.in);
         System.out.print("Digite os segundos do seu temporizador: ");
-
         int segundos = temporizador.nextInt();
-
-        do{
-            System.out.println(segundos);
-            segundos--;
-        }while(segundos>0);
-
-        System.out.println("Atenção! Seu temporizador chegou ao fim!  ");
         temporizador.close();
 
+        for ( ; segundos>0; segundos--) {
+            System.out.println(segundos);
+        }
+
+        System.out.println("Atenção! Seu temporizador chegou ao fim!  ");
+       
     }
 }

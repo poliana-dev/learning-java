@@ -1,4 +1,4 @@
-package poo.alunos;
+package exercicios.poo.alunos;
 
 public class Aluno {
     // atributos 

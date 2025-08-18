@@ -1,4 +1,4 @@
-package arrays.matrizes;
+package exercicios.estruturaDados.matrizes;
 
 public class Teste {
     public static void main(String[] args) {

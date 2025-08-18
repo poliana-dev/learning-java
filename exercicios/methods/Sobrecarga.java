@@ -1,4 +1,4 @@
-package methods;
+package exercicios.methods;
 
 public class Sobrecarga{
     static int Media(int n1, int n2){
