@@ -44,7 +44,7 @@ public class Main {
             }
         }
         ```
-    > Ou seja, podemos podemos criar um objeto de uma classe e acessá-lo em outra.
+> Ou seja, podemos podemos criar um objeto de uma classe e acessá-lo em outra.
 
 ***
 
@@ -87,4 +87,47 @@ public class Main {
 ```
 ***
 
-# 
+## Construtores
+
+É um método importante que roda **automaticamente** ao criar um objeto de uma classe. Ele inicializa os atributos da sua classe.
+- Evita repetir código.
+
+Como definir um construtor:
+```java
+public class Aluno {
+  int x; 
+  public Aluno() {
+    x = 5;  
+  }
+
+}
+```
+- Note que o método construdor não possui  tipo de retorno: `void`
+***
+- Pode ter multíplos parâmetros:
+```java
+public class Aluno {
+    int idade;
+    String nome; 
+
+    public Aluno(int idadeAluno, String nomeAluno) {
+        this.idade = idadeAluno;
+        this.nome = nomeAluno;  
+    }
+
+    public static void main(String[] args) {
+        Aluno alunoUm  = new Aluno(12, "Maria"); // criar objetos se tornou mais fácil
+    }
+}
+```
+- `this`: serve para referenciar o atributo da classe, e não ao parâmetro do construtor.
+
+***
+
+## Modificadores
+
+
+
+
+
+
