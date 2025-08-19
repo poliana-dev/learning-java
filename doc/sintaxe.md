@@ -484,21 +484,9 @@ for (int[] linha : matriz ){
 ```
 > Para cada linha na matriz. Percorra o valores i.
 
-
-
 ***
-# Estrutura de dados
-A array "simples" também é uma estrutura de dados, pois ela armazena e organiza informações. Porém, o Java possui outras estruturas mais flexiveis e robustas em `java.util`
-Alguns exemplos:
-- ArrayList
-- HashSet
-- HashMap
-
-***
-## ArrayList
-
-É uma lista que permite remoção e adição de dados, portanto mais flexível que a array "nativa" que já conhecemos.
-
+# O básico de síntaxe foi concluído!
+Siga para: [Estrutura de Dados](estrutura-dados.md)
 
 
 
